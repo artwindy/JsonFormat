@@ -1,0 +1,27 @@
+@import './base';
+@import './mixins/mixins';
+
+@mixin Block() {
+    padding: 7px 15px;
+    border-radius: $border-radius + px;
+    font-size: $font-size;
+    line-height: 16px;
+    cursor: pointer;
+    color: $font-color-gray;
+    background: $white;
+    border: 1px solid $border-color-gray;
+    // @include Modifier($color-list){
+    // }
+
+    &:focus,
+    &:hover{
+        outline: none;
+        // @include Modifier($color-list-active)
+    }
+}
+
+
+.x-button{
+    @include Block()
+    //@include Block(red)
+}
