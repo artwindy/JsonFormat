@@ -1,19 +1,16 @@
-import formatJson from './FormatJson'
+import FormatJson from './FormatJson'
 
-console.log(formatJson)
-const components = [
-    formatJson
-]
+const version = '0.0.1'
+console.log(FormatJson)
 
 var install = (app, opts = {}) => {
-  components.forEach(item => {
+  [ FormatJson ].forEach(item => {
     app.component(item.name, item)
   })
 }
 
-export default {
-  // 全局导出
-  version: '1.0.0',
+export {
+  version,
   install,
-  formatJson
+  FormatJson
 }

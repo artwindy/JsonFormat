@@ -1,0 +1,15 @@
+{
+  "name": "art-format-json",
+  "version": "0.0.1",
+  "description": "格式化json数据",
+  "main": "formatJson.common.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "format",
+    "json"
+  ],
+  "author": "chemailbox@163.com",
+  "license": "ISC"
+}

@@ -5,6 +5,7 @@
 </template>
 
 <script>
+//import {FormatJson} from '../packages/index.js'
 export default {
     name: 'App',
     data() {
@@ -28,7 +29,7 @@ export default {
         }
     },
     components: {
-
+        //FormatJson
     }
 }
 </script>

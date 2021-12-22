@@ -49,10 +49,11 @@
 </template>
 
 <script>
+import './formatJson.scss'
 
 export default {
     name: 'formatJson',
-    emits: ['value', 'open'],
+    emits: ['open'],
     props: {
         className: {
             type: String,
@@ -114,7 +115,7 @@ export default {
                 return data
             },
             set(val){
-                this.$emit('value', val)
+                //this.$emit('value', val)
             }
         }
     },
@@ -131,75 +132,3 @@ export default {
     }
 }
 </script>
-<style rel="stylesheet/scss" lang="scss" scoped>
-    .formatJson{
-        text-align: left;
-        font-size:14px;
-        font-family: none; /* monospace;*/
-        line-height:normal;
-        .v-object{
-            .v-toggle{
-                margin: 0 2px 0 4px;
-                cursor: pointer;
-                display:inline-block;
-                width:0;
-                height:0;
-                border:4px solid transparent;
-                border-right:2px solid transparent;
-                border-left:6px solid #2d2e42;
-                &.v-open{
-                    border:4px solid transparent;
-                    border-bottom:2px solid transparent;
-                    border-top:6px solid #2d2e42;
-                }
-            }
-        }
-        .v-pre{
-            margin: 0;
-            padding: 0 0 0 20px;
-            white-space: nowrap;
-            /*display: flex;*/
-        }
-        .v-operator{
-            font-style:normal;
-        }
-        .v-children{
-            display: inline;
-            vertical-align: text-top;
-        }
-        .v-key{
-            //font-family: none;
-            /*display: inline-block;
-            vertical-align: text-top;
-            word-break: break-all;*/
-            white-space: normal;
-        }
-        .v-all{ 
-            //font-family: none;
-            /*display: inline-block;*/
-            padding-left:5px;
-            word-break: break-all;
-            white-space: normal;
-            vertical-align: text-top;
-            /*max-width: 400px;*/
-            white-space: normal;
-        }
-        .v-ellipsis{
-            color: #999;
-            background-color: #eee;
-            display: inline-block;
-            line-height: 0.9;
-            font-size: 0.9em;
-            padding: 0px 4px 2px 4px;
-            margin: 0 4px;
-            border-radius: 3px;
-            vertical-align: 2px;
-            cursor: pointer;
-        }
-        .v-nowrap{white-space: nowrap;}
-        .v-val, .v-string{color:#42b983;}
-        .v-number {color:#fc1e70;}
-        .v-boolean {color:#0366d6;}
-        .v-null, .v-undefined {color:#005aff;}
-    }
-</style>

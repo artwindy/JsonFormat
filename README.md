@@ -1,21 +1,52 @@
-# artui
+# json 格式化
 
-## Project setup
+```
+yarn add art-format-json
+npm install art-format-json
+
+<format-json :value="data" :open="true"></format-json>
+
+data = {
+    empty: '',
+    string: "string",
+    "test-number": 0,
+    "test-null": null,
+    bool: true,
+    undefined: undefined,
+    array: ["1", "2", "3"],
+    json: {
+        one: "这是一个例子",
+        tow: "测试的例子",
+        tree: "非常好的例子",
+        array: [4, 5, 6],
+    }, 
+    function: function(){}
+}
+```
+## 技术栈
+```
+Vue3.0
+TypeScript
+sass
+Eslint
+```
+
+## 依赖安装
 ```
 yarn install
 ```
 
-### Compiles and hot-reloads for development
+### 运行
 ```
 yarn serve
 ```
 
-### Compiles and minifies for production
+### 开生产环境
 ```
 yarn build
 ```
 
-### Lints and fixes files
+### 代码校验和修复
 ```
 yarn lint
 ```
