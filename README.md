@@ -1,10 +1,9 @@
 # json 格式化
-
 ```
 yarn add art-format-json
 npm install art-format-json
 
-<format-json :value="data" :open="true"></format-json>
+<format-json :value="data"></format-json>
 
 data = {
     empty: '',
@@ -34,21 +33,25 @@ Eslint
 ## 依赖安装
 ```
 yarn install
+npm install
 ```
 
 ### 运行
 ```
 yarn serve
+npm run serve
 ```
 
 ### 开生产环境
 ```
 yarn build
+npm run build
 ```
 
 ### 代码校验和修复
 ```
 yarn lint
+npm run lint
 ```
 
 ### Customize configuration
