@@ -2,8 +2,8 @@ import { createApp } from 'vue'
 import App from './App.vue'
 
 // 全局导入
-import formatJson from '../packages/FormatJson/index.js'
-console.log(formatJson)
+import formatJson from 'art-format-json'
+//console.log(formatJson)
 
 // 按需导入
 // import { GjfIcon } from 'packages/index'

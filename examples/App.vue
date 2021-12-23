@@ -6,6 +6,7 @@
 
 <script>
 //import {FormatJson} from '../packages/index.js'
+//console.log(FormatJson)
 export default {
     name: 'App',
     data() {

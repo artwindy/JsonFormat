@@ -1,8 +1,9 @@
 {
-  "name": "formatjson",
+  "name": "art-format-json",
   "author": "chemailbox@163.com",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "private": false,
+  "main": "./lib/art-format-json.umd.min.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -18,9 +19,11 @@
   "keywords": [
     "formatJson",
     "json format",
+    "art-format-json",
     "components"
   ],
   "dependencies": {
+    "art-format-json": "0.0.2",
     "core-js": "^3.6.5",
     "node-sass": "5.0.0",
     "sass-loader": "10.1.1",
