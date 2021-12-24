@@ -5,7 +5,7 @@
 </template>
 
 <script>
-//import {FormatJson} from '../packages/index.js'
+import {FormatJson} from 'art-windy-test'
 //console.log(FormatJson)
 export default {
     name: 'App',
@@ -30,7 +30,7 @@ export default {
         }
     },
     components: {
-        //FormatJson
+        FormatJson
     }
 }
 </script>

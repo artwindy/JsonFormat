@@ -1,7 +1,7 @@
 {
   "name": "art-windy-test",
   "author": "chemailbox@163.com",
-  "version": "0.0.6",
+  "version": "0.0.10",
   "description": "格式化json数据",
   "license": "MIT",
   "private": false,
@@ -25,7 +25,7 @@
     "components"
   ],
   "dependencies": {
-    "art-windy-test": "^0.0.6",
+    "art-windy-test": "^0.0.10",
     "core-js": "^3.6.5",
     "node-sass": "5.0.0",
     "sass-loader": "10.1.1",

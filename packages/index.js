@@ -20,3 +20,7 @@ export default {
     install,
     FormatJson
 }
+
+export {
+    FormatJson
+}

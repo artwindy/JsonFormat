@@ -2,14 +2,14 @@ import { createApp } from 'vue'
 import App from './App.vue'
 
 // 全局导入
-import formatJson from 'art-windy-test'
-//console.log(formatJson)
+//import FormatJson from 'art-windy-test'
+//console.log(FormatJson)
 
 // 按需导入
-// import { GjfIcon } from 'packages/index'
-// console.log(GjfIcon)
+//import { FormatJson } from '../packages/index.js'
+//console.log(FormatJson)
 // 注册
 let app = createApp(App)
-app.use(formatJson)
+//app.use(FormatJson)
 // app.use(GjfIcon)
 app.mount('#app')
