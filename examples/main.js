@@ -2,7 +2,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 
 // 全局导入
-import formatJson from 'art-format-json'
+import formatJson from 'art-windy-test'
 //console.log(formatJson)
 
 // 按需导入

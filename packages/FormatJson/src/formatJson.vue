@@ -49,8 +49,9 @@
 </template>
 
 <script>
+import formatJson from 'art-windy-test'
 import './formatJson.scss'
-
+import { reactive, computed, ref, watch, defineComponent, defineAsyncComponent, getCurrentInstance, onMounted, onUnmounted, toRef, toRefs } from 'vue'
 export default {
     name: 'formatJson',
     emits: ['open'],
@@ -77,26 +78,19 @@ export default {
         }
     },
     components: {
-
+        formatJson
     },
-    data() {
-        return {
-            is_open: false
+    setup(props, ctx) {
+        const { proxy } = getCurrentInstance();
+        const renderData = reactive({
+            is_open: props.open
+        })
+        const isOpen = ()=> {
+            renderData.is_open = !renderData.is_open
         }
-    },
-    watch: {
-        open: {
-            immediate: true,  // 初始值执行handler的函数
-            //deep: true,       //深度监听
-            handler(newValue, oldValue) {
-                this.is_open = this.open
-            }
-        }
-    },
-    computed: {
-        data: {
-            get(){
-                let data = this.value
+        const data = computed({
+            get: () => {
+                let data = props.value
                 if(data == '' || data == undefined || data == null) {
                     return data
                 }
@@ -114,21 +108,63 @@ export default {
                 }
                 return data
             },
-            set(val){
-                //this.$emit('value', val)
+            set: val => {
+                proxy.$emit('update:modelValue', val)
             }
+        })
+
+
+        return {
+            ...toRefs(renderData),
+            data,
+            isOpen
         }
     },
-    created() {
 
-    },
-    methods: {
-        isOpen() {
-            this.is_open = !this.is_open
-        }
-    },
-    mounted() {
+    // data() {
+    //     return {
+    //         is_open: false
+    //     }
+    // },
+    // watch: {
+    //     open: {
+    //         immediate: true,  // 初始值执行handler的函数
+    //         //deep: true,       //深度监听
+    //         handler(newValue, oldValue) {
+    //             this.is_open = this.open
+    //         }
+    //     }
+    // },
+    // computed: {
+    //     data: {
+    //         get(){
+    //             let data = this.value
+    //             if(data == '' || data == undefined || data == null) {
+    //                 return data
+    //             }
 
-    }
+    //             if(typeof(data) != "string") {
+    //                 console.log(data, typeof(data), 'object===format')
+    //                 return data
+    //             }
+    //             //data = this.filter(data)
+    //             console.log(data, typeof(data), 'string===format')
+    //             try{
+    //                 data = JSON.parse(data)
+    //             } catch(error) {
+    //                 console.log(error, '=============')
+    //             }
+    //             return data
+    //         },
+    //         set(val){
+    //             //this.$emit('value', val)
+    //         }
+    //     }
+    // },
+    // methods: {
+    //     isOpen() {
+    //         this.is_open = !this.is_open
+    //     }
+    // }
 }
 </script>
