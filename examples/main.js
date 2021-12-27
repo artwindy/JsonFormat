@@ -1,6 +1,6 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import 'art-format-json/lib/formatJson.css'
+//import 'art-format-json/lib/formatJson.css'
 // 全局导入
 //import FormatJson from 'art-format-json'
 //console.log(FormatJson)

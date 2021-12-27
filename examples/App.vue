@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import {FormatJson} from 'art-format-json'
+import {FormatJson} from '../packages'
 console.log(FormatJson)
 export default {
     name: 'App',

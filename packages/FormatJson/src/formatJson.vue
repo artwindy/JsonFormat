@@ -52,7 +52,7 @@
 import { reactive, computed, ref, watch, defineComponent, defineAsyncComponent, getCurrentInstance, onMounted, onUnmounted, toRef, toRefs } from 'vue'
 export default {
     name: 'formatJson',
-    emits: ['open'],
+    //emits: ['open'],
     props: {
         className: {
             type: String,
@@ -76,14 +76,15 @@ export default {
         }
     },
     setup(props, ctx) {
-        const { proxy } = getCurrentInstance();
+        //const { proxy } = getCurrentInstance();
         const renderData = reactive({
-            is_open: props.open
+            is_open: props.open,
+            data: {}
         })
         const isOpen = ()=> {
             renderData.is_open = !renderData.is_open
         }
-        const data = computed({
+        renderData.data = computed({
             get: () => {
                 let data = props.value
                 if(data == '' || data == undefined || data == null) {
@@ -104,13 +105,12 @@ export default {
                 return data
             },
             set: val => {
-                proxy.$emit('update:modelValue', val)
+                //proxy.$emit('update:modelValue', val)
             }
         })
 
         return {
             ...toRefs(renderData),
-            data,
             isOpen
         }
     }
