@@ -1878,10 +1878,10 @@ array-unique@^0.3.2:
   resolved "https://registry.yarnpkg.com/array-unique/-/array-unique-0.3.2.tgz#a894b75d4bc4f6cd679ef3244a9fd8f46ae2d428"
   integrity sha1-qJS3XUvE9s1nnvMkSp/Y9Gri1Cg=
 
-art-windy-test@^0.0.10:
+art-format-json@^0.0.10:
   version "0.0.10"
-  resolved "https://registry.yarnpkg.com/art-windy-test/-/art-windy-test-0.0.10.tgz#6b66565172d3cc7c4391a9c2409463d4c71f2557"
-  integrity sha512-YAMtUl1ErY3zkdDuWqz17OeMfG0Hp4xDazH/u0VkClShDLfzn/58IXSAE+PhFM0Fil1Qime46mTm9KJYjh0d3A==
+  resolved "https://registry.yarnpkg.com/art-format-json/-/art-format-json-0.0.10.tgz#33ff7f7d88fdbe94a8ed949ae7822f22c7255da4"
+  integrity sha512-kHSzKln1xNGyJQqgDV9B/bm6xYf47uW7rm5dxtcjk0uE6L6m31Mg/nm4KgRdVV6gIoZyWleD+TOvQmkn8jljxQ==
   dependencies:
     core-js "^3.6.5"
     node-sass "5.0.0"

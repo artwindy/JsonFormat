@@ -1,7 +1,7 @@
 {
-  "name": "art-windy-test",
+  "name": "art-format-json",
   "author": "chemailbox@163.com",
-  "version": "0.0.10",
+  "version": "0.0.1",
   "description": "格式化json数据",
   "license": "MIT",
   "private": false,
@@ -21,11 +21,11 @@
   "keywords": [
     "formatJson",
     "json format",
-    "art-windy-test",
+    "art-format-json",
     "components"
   ],
   "dependencies": {
-    "art-windy-test": "^0.0.10",
+    "art-format-json": "^0.0.10",
     "core-js": "^3.6.5",
     "node-sass": "5.0.0",
     "sass-loader": "10.1.1",

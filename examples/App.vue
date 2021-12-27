@@ -5,8 +5,8 @@
 </template>
 
 <script>
-import {FormatJson} from 'art-windy-test'
-//console.log(FormatJson)
+import {FormatJson} from 'art-format-json'
+console.log(FormatJson)
 export default {
     name: 'App',
     data() {

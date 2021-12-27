@@ -5,6 +5,8 @@ npm install art-format-json
 
 <format-json :value="data"></format-json>
 
+import 'art-format-json/lib/formatJson.css'
+
 data = {
     empty: '',
     string: "string",
